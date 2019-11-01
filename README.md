@@ -1,77 +1,9 @@
 # Mongo-Chat
-
 ## Lab 9, DS
 
-'''bash 
+### rs.status()
 
-
-
-{
-        "_id" : "rs0",
-        "version" : 1,
-        "protocolVersion" : NumberLong(1),
-        "writeConcernMajorityJournalDefault" : true,
-        "members" : [
-                {
-                        "_id" : 0,
-                        "host" : "mongofirst:27017",
-                        "arbiterOnly" : false,
-                        "buildIndexes" : true,
-                        "hidden" : false,
-                        "priority" : 1,
-                        "tags" : {
-
-                        },
-                        "slaveDelay" : NumberLong(0),
-                        "votes" : 1
-                },
-                {
-                        "_id" : 1,
-                        "host" : "mongosecond:27017",
-                        "arbiterOnly" : false,
-                        "buildIndexes" : true,
-                        "hidden" : false,
-                        "priority" : 1,
-                        "tags" : {
-
-                        },
-                        "slaveDelay" : NumberLong(0),
-                        "votes" : 1
-                },
-                {
-                        "_id" : 2,
-                        "host" : "mongothird:27017",
-                        "arbiterOnly" : false,
-                        "buildIndexes" : true,
-                        "hidden" : false,
-                        "priority" : 1,
-                        "tags" : {
-
-                        },
-                        "slaveDelay" : NumberLong(0),
-                        "votes" : 1
-                }
-        ],
-        "settings" : {
-                "chainingAllowed" : true,
-                "heartbeatIntervalMillis" : 2000,
-                "heartbeatTimeoutSecs" : 10,
-                "electionTimeoutMillis" : 10000,
-                "catchUpTimeoutMillis" : -1,
-                "catchUpTakeoverDelayMillis" : 30000,
-                "getLastErrorModes" : {
-
-                },
-                "getLastErrorDefaults" : {
-                        "w" : 1,
-                        "wtimeout" : 0
-                },
-                "replicaSetId" : ObjectId("6fdf486a5iwe987e1fs5s48e")
-        }
-}
-'''
-
-'''bash
+```bash
 {
         "set" : "rs0",
         "date" : ISODate("2019-11-01T20:50:26.219Z"),
@@ -217,4 +149,75 @@
         },
         "operationTime" : Timestamp(1572483120, 1)
 }
-'''
+```
+
+### rs.config()
+
+```bash
+{
+        "_id" : "rs0",
+        "version" : 1,
+        "protocolVersion" : NumberLong(1),
+        "writeConcernMajorityJournalDefault" : true,
+        "members" : [
+                {
+                        "_id" : 0,
+                        "host" : "mongofirst:27017",
+                        "arbiterOnly" : false,
+                        "buildIndexes" : true,
+                        "hidden" : false,
+                        "priority" : 1,
+                        "tags" : {
+
+                        },
+                        "slaveDelay" : NumberLong(0),
+                        "votes" : 1
+                },
+                {
+                        "_id" : 1,
+                        "host" : "mongosecond:27017",
+                        "arbiterOnly" : false,
+                        "buildIndexes" : true,
+                        "hidden" : false,
+                        "priority" : 1,
+                        "tags" : {
+
+                        },
+                        "slaveDelay" : NumberLong(0),
+                        "votes" : 1
+                },
+                {
+                        "_id" : 2,
+                        "host" : "mongothird:27017",
+                        "arbiterOnly" : false,
+                        "buildIndexes" : true,
+                        "hidden" : false,
+                        "priority" : 1,
+                        "tags" : {
+
+                        },
+                        "slaveDelay" : NumberLong(0),
+                        "votes" : 1
+                }
+        ],
+        "settings" : {
+                "chainingAllowed" : true,
+                "heartbeatIntervalMillis" : 2000,
+                "heartbeatTimeoutSecs" : 10,
+                "electionTimeoutMillis" : 10000,
+                "catchUpTimeoutMillis" : -1,
+                "catchUpTakeoverDelayMillis" : 30000,
+                "getLastErrorModes" : {
+
+                },
+                "getLastErrorDefaults" : {
+                        "w" : 1,
+                        "wtimeout" : 0
+                },
+                "replicaSetId" : ObjectId("6fdf486a5iwe987e1fs5s48e")
+        }
+}
+```
+##
+
+![](https://i.ibb.co/LYQL2xN/image.png)
